@@ -1,0 +1,179 @@
+<html>
+<head>
+     
+    <style>
+        body{
+        
+        background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjB0aWNrZXRzfGVufDB8fDB8fHww&w=1000&q=80');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Arial, Helvetica, sans-serif;
+        color:white;
+       }
+       
+       form{
+        width:35rem;
+        margin: auto;
+        color:whitesmoke;
+        backdrop-filter: blur(16px) saturate(180%);
+       
+        background-color: rgba(11, 15, 13, 0.582);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        padding: 20px 25px;
+       }
+       
+               </style>
+<script>
+function ValidateFormFields()
+{
+	
+    var name = document.forms["RegForm"]["Name"];
+    var email = document.forms["RegForm"]["EMail"];
+    var phone = document.forms["RegForm"]["Telephone"];
+    var what =  document.forms["RegForm"]["Subject"];
+    var password = document.forms["RegForm"]["Password"];
+    var address = document.forms["RegForm"]["Address"];
+
+    if (name.value == "") // OK
+    {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    else
+    {
+    	var letters = /^[A-Za-z .]+$/;
+   		if(!name.value.match(letters))
+   		{
+			window.alert("Alphabets are only allowed in name.");
+        	name.focus();
+	        return false;
+	    }
+    }
+
+    if (address.value == "")  // OK
+    {
+        window.alert("Please enter your address.");
+        address.focus();
+        return false;
+    }
+
+    if (email.value == "")	// OK
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    else
+    {
+    	var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    	if (!email.value.match(letters))
+    	{
+        	window.alert("You have entered an invalid email address!");
+        	email.focus();
+        	return false;
+        }
+
+
+    }
+
+
+    if (phone.value == "")	// OK
+    {
+        window.alert("Please enter your telephone number.");
+        phone.focus();
+        return false;
+    }
+    else
+    {
+		var phoneno = /^\d{10}$/;
+  		if(!phone.value.match(phoneno))
+  		{
+  			window.alert("You have entered wrong mobile number!");
+		    phone.focus();
+		    return false;
+  		}
+
+    }
+
+    if (password.value == "")
+    {
+        window.alert("Please enter your password");
+        password.focus();
+        return false;
+    }
+    else
+    {
+      	var passw=  /^[A-Za-z]\w{7,14}$/;
+	  	if(!password.value.match(passw))
+  		{
+	  		window.alert('Password should have upper and lowercase letters and its width should be in range of 7-14');
+	  		password.focus();
+	  		return false;
+		}
+    }
+
+    if (what.selectedIndex < 1)  //OK
+    {
+        alert("Please enter your location.");
+        what.focus();
+        return false;
+    }
+
+    return true;
+}</script>
+
+<style>
+div {
+    box-sizing: border-box;
+    width: 100%;
+    border: 100px solid black;
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 600px;
+    
+}</style></head>
+
+<body>
+<h1 style="text-align: center"> Register Your Ticket Here </h1>
+<form name="RegForm" action="" onsubmit="return ValidateFormFields()" method="">
+
+    <p>Name: <input type="text" size=65 name="Name" size="50"> </p><br>
+    <p>Mail-id: <input type="text" size=65 name="EMail" size="50">  </p><br>
+    <p>Mobile Number: <input type="text" size=65 name="Telephone" size="10"> </p><br>
+    <p>Gender: <input type="radio" name="gender" value="1"/>Male<input type="radio" name="gender" value="2"/>Female</p><br>
+    <p>City: <input type="text" size=65 name="city" size="50"> </p><br>
+    <p>Total Persons: <input type="text" size=65 name="persons" size="50"> </p><br>
+    <p>Date: <input type="date" size=65 name="date" size="50"> </p><br>
+    <p>Movie Name: <input type="text" size=65 name="Name" size="50"> </p><br>
+
+    <p>Select Your Location:
+        <select type="text" value="" name="Subject">
+            <option>Metropolis</option>
+            <option>Downtown</option>
+            <option>Valleyview</option>
+            <option>Green Hills</option>
+            <option>Sunnyvale</option>
+		<option>Bayside</option>
+		<option>Coastal City</option>
+        <option>Orion City</option>
+        <option>Midtown</option>
+        <option>Sandtown</option>
+        <option>Moonville</option>
+        </select></p><br><br>
+    <p><text-align : center ><input type="submit" value="SUBMIT" name="Submit"><a href="homepage.html"></a>
+        <input type="reset" value="RESET" name="Reset">
+      
+    </p>
+</form>
+</body>
+</html>

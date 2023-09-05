@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+ body{
+ 
+ background-image:url('signup.png');
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: 100% auto;
+ background-attachment: fixed;
+ background-size: cover;
+ font-family: Arial, Helvetica, sans-serif;
+ color:black;
+}
+
+
+h1{
+ text-align: center;
+}
+
+
+form{
+ width:35rem;
+ margin: auto;
+ color:whitesmoke;
+ backdrop-filter: blur(16px) saturate(180%);
+ -webkit-backdrop-filter: blur(16px) saturate(180%);
+ background-color: rgba(11, 15, 13, 0.582);
+ background-color: rgba(11, 15, 13, 0.582);
+ border-radius: 12px;
+ border: 1px solid rgba(255, 255, 255, 0.125);
+ padding: 20px 25px;
+}
+
+input[type=text], input[type=password]{
+ width: 100%;
+ margin: 10px 0;
+ border-radius: 5px;
+ padding: 15px 18px;
+ box-sizing: border-box;
+}
+
+button {
+ background-color: #030804;
+ color: white;
+ padding: 14px 20px;
+ border-radius: 5px;
+ margin: 7px 0;
+ width: 100%;
+ font-size: 18px;
+}
+
+button:hover {
+ opacity: 0.6;
+ cursor: pointer;
+}
+
+.headingsContainer{
+ text-align: center;
+}
+
+.headingsContainer p{
+ color: white;
+}
+.mainContainer{
+ padding: 16px;
+}
+
+
+.subcontainer{
+ display: flex;flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.subcontainer a{
+ font-size: 16px;
+ margin-bottom: 12px;
+}
+
+span.forgotpsd a {
+ float: right;
+ color: whitesmoke;
+ padding-top: 16px;
+}
+
+.forgotpsd a{
+ color: rgb(74, 146, 235);
+}
+
+.forgotpsd a:link{
+ text-decoration: none;
+}
+
+.register{
+ color: white;
+ text-align: center;
+}
+
+.register a{
+ color: rgb(74, 146, 235);
+}
+
+.register a:link{
+ text-decoration: none;
+}
+        </style>
+    </head>
+    <body>
+        <title>Sign-Up Form</title>
+        <h1><center>Sign-Up</center></h1>
+        <h2><center>Create an Account Here</center></h2>
+        <form action="signup.php" method="post">
+            <hr>
+
+            <label>First Name : </label>   
+            <input type="text" placeholder="Enter First Name" id ="firstname" name="firstname" required>
+            <label>Last Name : </label>   
+            <input type="text" placeholder="Enter Last Name" id="lastname" name="lastname" required>  
+            <label>Email id : </label>   
+            <input type="email" placeholder="Enter Email id" id="email_id" name="email_id" required>  
+            <label>Date Of Birth : </label>   
+            <input type="date" placeholder="Enter Date Of Birth" id="dateofbirth" name="dateofbirth" required> <p> 
+            <label>Designation : </label> <input type="option" id ="designation" name="designation">  
+            <select>Designation
+            <option value="student"></option>
+            <option value="student">student</option>
+            <option value="professor">professor</option>
+            <option value="teacher">Teacher</option>
+            <option value="other">Other</option></p>
+            </select> <p>
+            <label>Phone Number : </label>  </p> 
+            <input type="text" placeholder="Enter phone Number" id = "phonenumber" name="phonenumber" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" id = "password" name="password" required> 
+            <label>Confirm Password : </label>   
+            <input type="password" placeholder="Confirm password" id="confirmpassword" name="confirmpassword" required>  
+            <div>
+            <button type="submit" class="signup">Sign Up<a href="homepage.html"></a></a></button>
+            <button type="button" class="cancel">Cancel</button>
+            
+            </div>
+        </form>
+    </body>
+</html>
+
